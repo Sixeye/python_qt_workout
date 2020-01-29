@@ -6,13 +6,13 @@ class MainWindow(QtWidgets.QWidget):
         self.setup_ui()
 
     def setup_ui(self):
-        self.create_widget()
+        self.create_widgets()
         self.modify_widgets()
         self.create_layouts()
         self.add_widgets_to_layouts()
         self.setup_connections()
 
-    def create_widget(self):
+    def create_widgets(self):
         self.btn_clique = QtWidgets.QPushButton("Clique")
 
     def modify_widgets(self):
@@ -22,7 +22,7 @@ class MainWindow(QtWidgets.QWidget):
         self.main_layout = QtWidgets.QVBoxLayout(self)
 
     def add_widgets_to_layouts(self):
-        self.main_layout.addChildWidget(self.btn_clique)
+        self.main_layout.addWidget(self.btn_clique)
 
     def setup_connections(self):
         self.btn_clique.clicked.connect(self.bouton_clicked)
